@@ -1,0 +1,22 @@
+[package]
+name = "ecommerce-api-client"
+version = "0.1.0"
+edition = "2021"
+authors = ["Ayush Gour <ayush@example.com>"]
+description = "A clean, type-safe Rust client library for B2B e-commerce APIs"
+license = "MIT"
+readme = "README.md"
+keywords = ["ecommerce", "api", "client", "b2b", "orders"]
+categories = ["api-bindings", "web-programming::http-client"]
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json", "rustls-tls"], default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.0", features = ["rt-multi-thread", "macros"] }
+thiserror = "1.0"
+base64 = "0.21"
+url = "2.0"
+
+[dev-dependencies]
+tokio-test = "0.4"
